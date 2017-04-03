@@ -1,0 +1,90 @@
+/* Lets us use % for flex-basis */
+.tabs-left#browser .left#main, .tabs-right#browser .right#main {
+	height: 100%; 
+}
+
+/* Column wrap for tabs and panels containers on same side */
+.tabs-left#browser .left#main .inner { 
+	flex-flow: column wrap; 
+	align-content: flex-start;
+} 
+
+/* Wrap-reverse so flexbox order doesn't need to be changed for right side */
+.tabs-right#browser .right#main .inner { 
+	flex-flow: column wrap-reverse; 
+	align-content: flex-start;
+}
+
+/* Tab container on top of panels - set 'order: 2' to have panels on top */
+#panels-container.left:not(.switcher) ~ #tabs-container.left, #panels-container.right:not(.switcher) ~ #tabs-container.right { 
+	order: 1;  
+	border-bottom: 1px solid var(--colorBorder); 
+	box-sizing: border-box;
+}
+
+/* When panel container hidden, give tab container full height */
+#panels-container.left.switcher ~ #tabs-container.left, #panels-container.right.switcher ~ #tabs-container.right { 
+	flex-basis: 100%;  
+	order: 1;  
+}
+
+/* Panel container under tab container */
+.tabs-left#browser #panels-container.left:not(.switcher), .tabs-right#browser #panels-container.right:not(.switcher) { 
+	order: 2; 
+}
+
+/* When panel container hidden give the toggle fullheight */
+.tabs-left#browser:not(.fullscreen) #panels-container.left.switcher, .tabs-right#browser:not(.fullscreen) #panels-container.right.switcher { 
+	flex-basis: 100%;  
+}
+
+/* Webview container */ 
+.tabs-left#browser .left#main #webview-container, .tabs-right#browser .right#main #webview-container { 
+	order: 3; 
+}
+
+/* Remove default resizers/splitters when tab and panels containers on same side */
+.tabs-left#browser .left#main .fullheight, .tabs-right#browser .right#main .fullheight { 
+	display: none;
+}
+
+/* Decrease default panel container width */
+#panels > .panel-group > div {
+	min-width: 50px !important;
+}
+
+/* Horizontal resizer */
+.tabs-left#browser .left#main #tabspanels-resizerX, .tabs-right#browser .right#main #tabspanels-resizerX {
+	width: 10px;
+	height: 100%;
+	background : transparent;
+	z-index: 2;
+	position: absolute;
+	bottom: 0px;
+	cursor: ew-resize;
+}
+
+/* Horizontal position is different for each side */
+.tabs-left#browser .left#main #tabspanels-resizerX {
+	left: -5px;
+}
+.tabs-right#browser .right#main #tabspanels-resizerX {
+	right: -5px;
+}
+
+/* Vertical resizer - change 'top: -5px' to 'bottom: -5px' for panels on top */
+.tabs-left#browser .left#main #tabspanels-resizerY, .tabs-right#browser .right#main #tabspanels-resizerY {
+	width: 100%;
+	height: 10px;
+	background : transparent;
+	z-index: 2;
+	position: absolute;
+	right: 0;
+	top: -5px; 
+	cursor: ns-resize;
+}
+
+/* Optionally remove: panel switcher, bookamrk panel header, sort selector, folder item count, manager editor  */
+/*#switch, .panel-bookmarks > header, .sortselector, .folder-item-count, .panel-bookmarks-edit {
+	display: none !important;
+}*/

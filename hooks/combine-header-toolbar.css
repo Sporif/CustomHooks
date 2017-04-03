@@ -1,0 +1,53 @@
+/* Remove header */
+.maximized#browser:not(.tabs-top) #header {
+	min-height: 0;
+	z-index: auto;
+}
+
+/* Keep Vivaldi button */
+#browser:not(.tabs-top) .vivaldi {
+	z-index: 1;
+}
+
+/* Vivaldi button size and placement */
+#browser:not(.tabs-top) .vivaldi {
+	position: relative !important;
+	top: 2px !important;
+	left: -3px !important;
+	transform: scale(0.9) rotate(3deg) !important;
+}
+
+/* Vivaldi button placement */
+.maximized#browser:not(.tabs-top) .vivaldi {
+	left: -6px !important;
+}
+
+/* Keep horizontal menu */
+.maximized#browser:not(.tabs-top) .topmenu {
+	position: absolute;
+}
+
+/* Horizontal menu position and border */
+.maximized#browser:not(.tabs-top) .topmenu > nav {
+	left: -30px;
+	padding-bottom: 3px;
+	border-bottom: 1px solid var(--colorBorder);
+}
+
+/* Add border on top of vertical tab container */
+#tabs-container.left > div.resize > div > span:nth-child(1) > div,
+#tabs-container.right > div.resize > div > span:nth-child(1) > div {
+	border-top: 1px solid var(--colorBorder);
+}
+
+/* Keep window buttons and add border */
+.maximized#browser:not(.tabs-top) .window-buttongroup {
+	z-index: 1;
+	padding-bottom: 28px !important;
+	border-bottom: 1px solid var(--colorBorder) !important;
+}
+
+/* Don't show horizontal menu and window buttons when no ui */
+#browser.minimal-ui:not(.tabs-top) .topmenu, #browser.minimal-ui:not(.tabs-top) .window-buttongroup {
+	display: none !important;
+}

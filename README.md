@@ -1,7 +1,7 @@
 # CustomHooks
 My own hooks for Vivaldi
 
-You need [VivaldiHooks](https://github.com/justdanpo/VivaldiHooks) to use them.
+You need [VivaldiHooks](https://github.com/justdanpo/VivaldiHooks) to use them. Simply add the files within \hooks to {instdir}\vivaldi\hooks.
 
 **combine-header-toolbar**: 
  - [combine-header-toolbar.css](https://github.com/Sporif/CustomHooks/blob/master/hooks/combine-header-toolbar.css) and [combine-header-toolbar.js](https://github.com/Sporif/CustomHooks/blob/master/hooks/combine-header-toolbar.js)

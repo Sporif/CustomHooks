@@ -8,7 +8,7 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab){
 		var addCss = 
 		`if(!cssText){ 
 			var cssText = document.createElement('style'); 
-			cssText.setAttribute('description', 'Added by chrome-webstore.js'); 
+			cssText.setAttribute('description', 'Added by chrome-webstore-css.js'); 
 		} 
 		cssText.textContent = \`${css}\`;
 		document.head.appendChild(cssText);`;

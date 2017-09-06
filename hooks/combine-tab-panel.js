@@ -1,6 +1,6 @@
 // Places the tabs container on top of the panels container when they're on the same side
 // Script sets height/widths, and adds resizer splitters
-vivaldi.jdhooks.onUIReady(function() {
+setTimeout(function(){
 	
 	// Style elements
 	var tabspanels_flexBasis = document.createElement('style');
@@ -117,4 +117,5 @@ vivaldi.jdhooks.onUIReady(function() {
 		else if (startedResizeY) { chrome.storage.local.set({'tabsflexBasis': tabsflexBasis}); }
 		startedResizeX = startedResizeY = false;
 	}
-});
+	
+}, 500);

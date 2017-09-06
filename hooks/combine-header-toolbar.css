@@ -1,53 +1,60 @@
 /* Remove header */
-.maximized#browser:not(.tabs-top) #header {
-	min-height: 0;
-	z-index: auto;
+:-webkit-any(.native, .maximized)#browser #header {
+	min-height: 0 !important;
 }
 
 /* Keep Vivaldi button */
-#browser:not(.tabs-top) .vivaldi {
+:-webkit-any(.native, .maximized)#browser .vivaldi  {
 	z-index: 1;
-}
-
-/* Vivaldi button size and placement */
-#browser:not(.tabs-top) .vivaldi {
-	position: relative !important;
-	top: 2px !important;
-	left: -3px !important;
-	transform: scale(0.9) rotate(3deg) !important;
-}
-
-/* Vivaldi button placement */
-.maximized#browser:not(.tabs-top) .vivaldi {
-	left: -6px !important;
+	top: 5px !important;
 }
 
 /* Keep horizontal menu */
-.maximized#browser:not(.tabs-top) .topmenu {
+:-webkit-any(.native, .maximized)#browser .topmenu {
 	position: absolute;
 }
 
-/* Horizontal menu position and border */
-.maximized#browser:not(.tabs-top) .topmenu > nav {
-	left: -30px;
-	padding-bottom: 3px;
-	border-bottom: 1px solid var(--colorBorder);
+/* Reduce toolbar size for vivialdi button */
+:-webkit-any(.native, .maximized)#browser:not(.tabs-top) .toolbar.toolbar-addressbar {
+	padding-left: 24px;
 }
 
-/* Add border on top of vertical tab container */
-#tabs-container.left > div.resize > div > span:nth-child(1) > div,
-#tabs-container.right > div.resize > div > span:nth-child(1) > div {
-	border-top: 1px solid var(--colorBorder);
+/* Reduce toolbar size for horizontal menu */
+:-webkit-any(.native, .maximized).horizontal-menu#browser:not(.tabs-top) .toolbar.toolbar-addressbar {
+	padding-left: 267px;
 }
 
-/* Keep window buttons and add border */
-.maximized#browser:not(.tabs-top) .window-buttongroup {
+/* Non-Native window fixes */
+
+/* Keep window buttons */
+.maximized#browser .window-buttongroup {
 	z-index: 1;
-	padding-bottom: 28px !important;
-	border-bottom: 1px solid var(--colorBorder) !important;
 }
 
-/* Don't show horizontal menu and window buttons when no ui */
-#browser.minimal-ui:not(.tabs-top) .topmenu, #browser.minimal-ui:not(.tabs-top) .window-buttongroup {
+/* Reduce toolbar size for window buttons */
+.maximized#browser:not(.native):not(.tabs-top) .toolbar.toolbar-addressbar {
+	padding-right: 140px;
+}
+
+/* Adjust horizontal menu position */
+.maximized#browser:not(.native) .topmenu {
+	left: -30px;
+}
+
+/* Remove vivaldi button, horizontal menu and window buttons when no ui */
+.maximized.minimal-ui#browser :-webkit-any(.vivaldi, .topmenu, .window-buttongroup) {
 	display: none !important;
+}
+
+/* Tabs on top fixes */
+
+/* Maximized not Native - Reduce tab bar size for horizontal menu and window buttons */
+.maximized.horizontal-menu#browser:not(.native) #tabs-container.top {
+	padding-left: 276px !important;
+	padding-right: 140px !important;
+}
+
+/* Native - Reduce tab bar size for horizontal menu and window buttons */
+.native.horizontal-menu#browser #tabs-container.top {
+	padding-left: 276px !important;
 }

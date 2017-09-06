@@ -1,4 +1,4 @@
-// Add theme color variables to chrome:// and vivaldi:// urls
+// Send theme css variables to chrome:// and vivaldi:// urls
 
 function sendColors() {
 	var css = ":root {\n "+document.body.style.cssText.replace(/;/g, ';\n').replace(/:/g, ': ')+" }";

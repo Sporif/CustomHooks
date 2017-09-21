@@ -6,7 +6,6 @@
 /* Keep Vivaldi button */
 :-webkit-any(.native, .maximized)#browser .vivaldi  {
 	z-index: 1;
-	top: 5px !important;
 }
 
 /* Keep horizontal menu */

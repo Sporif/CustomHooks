@@ -3,25 +3,8 @@
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab){
 	if(['loading', 'complete'].indexOf(changeInfo.status) > -1 && tab.url.startsWith('https://chrome.google.com/webstore')){
 		var css =`
-		body {
-			background-color: #282828 !important;
-		}
-		
-		.F-ia-k {
-			background-color: #282828 !important;
-		}
-		
-		.F-n-J {
-			background-color: #282828 !important;
-		}
-		
-		.n-j {
-			background-color: #282828 !important;
-		}
-		
-		.F-x {
-			background-color: #282828 !important;
-		}`;
+		/* Place your css here, in between the backticks */
+		`;
 		var addCss = 
 		`if(!cssText){ 
 			var cssText = document.createElement('style'); 

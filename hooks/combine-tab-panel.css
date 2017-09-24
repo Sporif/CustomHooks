@@ -1,5 +1,6 @@
 /* Lets us use % for flex-basis */
-.tabs-left#browser .left#main, .tabs-right#browser .right#main {
+.tabs-left#browser .left#main, 
+.tabs-right#browser .right#main {
 	height: 100%; 
 }
 
@@ -16,35 +17,47 @@
 }
 
 /* Tab container on top of panels - set 'order: 2' to have panels on top */
-#panels-container.left:not(.switcher) ~ #tabs-container.left, #panels-container.right:not(.switcher) ~ #tabs-container.right { 
+#panels-container.left:not(.switcher) ~ #tabs-container.left, 
+#panels-container.right:not(.switcher) ~ #tabs-container.right { 
 	order: 1;  
 	border-bottom: 1px solid var(--colorBorder); 
 	box-sizing: border-box;
 }
 
 /* When panel container hidden, give tab container full height */
-#panels-container.left.switcher ~ #tabs-container.left, #panels-container.right.switcher ~ #tabs-container.right { 
+#panels-container.left.switcher ~ #tabs-container.left, 
+#panels-container.right.switcher ~ #tabs-container.right { 
 	flex-basis: 100%;  
 	order: 1;  
 }
 
 /* Panel container under tab container */
-.tabs-left#browser #panels-container.left:not(.switcher), .tabs-right#browser #panels-container.right:not(.switcher) { 
+.tabs-left#browser #panels-container.left:not(.switcher), 
+.tabs-right#browser #panels-container.right:not(.switcher) { 
 	order: 2; 
 }
 
 /* When panel container hidden give the toggle fullheight */
-.tabs-left#browser:not(.fullscreen) #panels-container.left.switcher, .tabs-right#browser:not(.fullscreen) #panels-container.right.switcher { 
+.tabs-left#browser:not(.fullscreen) #panels-container.left.switcher, 
+.tabs-right#browser:not(.fullscreen) #panels-container.right.switcher { 
 	flex-basis: 100%;  
 }
 
-/* Webview container */ 
-.tabs-left#browser .left#main #webview-container, .tabs-right#browser .right#main #webview-container { 
+/* Webview container is always last */ 
+.tabs-left#browser .left#main #webview-container, 
+.tabs-right#browser .right#main #webview-container { 
 	order: 3; 
 }
 
+/* When fullscreen make Webview full width */
+.tabs-left#browser.fullscreen .left#main #webview-container, 
+.tabs-right#browser.fullscreen .right#main #webview-container { 
+	width: 100%; 
+}
+
 /* Remove default resizers/splitters when tab and panels containers on same side */
-.tabs-left#browser .left#main .fullheight, .tabs-right#browser .right#main .fullheight { 
+.tabs-left#browser .left#main .fullheight, 
+.tabs-right#browser .right#main .fullheight { 
 	display: none;
 }
 
@@ -54,7 +67,8 @@
 }
 
 /* Horizontal resizer */
-.tabs-left#browser .left#main #tabspanels-resizerX, .tabs-right#browser .right#main #tabspanels-resizerX {
+.tabs-left#browser .left#main #tabspanels-resizerX, 
+.tabs-right#browser .right#main #tabspanels-resizerX {
 	width: 10px;
 	height: 100%;
 	background : transparent;
@@ -73,7 +87,8 @@
 }
 
 /* Vertical resizer - change 'top: -5px' to 'bottom: -5px' for panels on top */
-.tabs-left#browser .left#main #tabspanels-resizerY, .tabs-right#browser .right#main #tabspanels-resizerY {
+.tabs-left#browser .left#main #tabspanels-resizerY, 
+.tabs-right#browser .right#main #tabspanels-resizerY {
 	width: 100%;
 	height: 10px;
 	background : transparent;

@@ -29,11 +29,13 @@ setTimeout(function(){
 	// Set tabs & panels flex-basis
 	function setTabsPanelsflexBasis(value) { 
 		tabspanels_flexBasis.textContent =
-		`#panels-container.left:not(.switcher) ~ #tabs-container.left, #panels-container.right:not(.switcher) ~ #tabs-container.right { 
+		`#browser:not(.fullscreen) #panels-container.left:not(.switcher) ~ #tabs-container.left, 
+		#browser:not(.fullscreen) #panels-container.right:not(.switcher) ~ #tabs-container.right { 
 			flex-basis: ` + value + `%;
 		}
 		
-		.tabs-left#browser:not(.fullscreen) #panels-container.left:not(.switcher), .tabs-right#browser:not(.fullscreen) #panels-container.right:not(.switcher) { 
+		.tabs-left#browser:not(.fullscreen) #panels-container.left:not(.switcher), 
+		.tabs-right#browser:not(.fullscreen) #panels-container.right:not(.switcher) { 
 			flex-basis: calc(100% - ` + value + `%);
 		}`
 		document.head.appendChild(tabspanels_flexBasis);
@@ -42,8 +44,12 @@ setTimeout(function(){
 	// Set tabs & panels width
 	function setTabsPanelsWidth(value) {
 		tabspanels_width.textContent =
-		`.tabs-left#browser .left#main #tabs-container, .tabs-right#browser .right#main #tabs-container, .tabs-left#browser .left#main .tab-position, .tabs-right#browser .right#main .tab-position,
-		.tabs-left#browser:not(.fullscreen) #panels-container.left:not(.switcher), .tabs-right#browser:not(.fullscreen) #panels-container.right:not(.switcher) {
+		`#browser:not(.fullscreen) .left#main #tabs-container.left, 
+		#browser:not(.fullscreen) .right#main #tabs-container.right, 
+		.tabs-left#browser:not(.fullscreen) .left#main .tab-position, 
+		.tabs-right#browser:not(.fullscreen) .right#main .tab-position,
+		.tabs-left#browser:not(.fullscreen) #panels-container.left:not(.switcher), 
+		.tabs-right#browser:not(.fullscreen) #panels-container.right:not(.switcher) {
 			width: ` + value + `px !important;
 		}`
 		document.head.appendChild(tabspanels_width);
@@ -52,7 +58,8 @@ setTimeout(function(){
 	// Set webview width based on tab width
 	function setWebviewWidth(value) {
 		webview_width.textContent =
-		`.tabs-left#browser:not(.fullscreen) .left#main #webview-container, .tabs-right#browser:not(.fullscreen) .right#main #webview-container { 
+		`.tabs-left#browser:not(.fullscreen) .left#main #webview-container, 
+		.tabs-right#browser:not(.fullscreen) .right#main #webview-container { 
 			width: calc(100% - ` + value + `px);
 		}`
 		document.head.appendChild(webview_width);
@@ -118,4 +125,4 @@ setTimeout(function(){
 		startedResizeX = startedResizeY = false;
 	}
 	
-}, 500);
+}, 750);

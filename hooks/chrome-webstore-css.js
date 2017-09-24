@@ -1,10 +1,27 @@
 // Add css to Chrome Webstore
 
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab){
-	if(['loading', 'complete'].indexOf(changeInfo.status) > -1 & tab.url.startsWith('https://chrome.google.com/webstore')){
+	if(['loading', 'complete'].indexOf(changeInfo.status) > -1 && tab.url.startsWith('https://chrome.google.com/webstore')){
 		var css =`
-		/* Place your css here, in between the backticks */
-		`;
+		body {
+			background-color: #282828 !important;
+		}
+		
+		.F-ia-k {
+			background-color: #282828 !important;
+		}
+		
+		.F-n-J {
+			background-color: #282828 !important;
+		}
+		
+		.n-j {
+			background-color: #282828 !important;
+		}
+		
+		.F-x {
+			background-color: #282828 !important;
+		}`;
 		var addCss = 
 		`if(!cssText){ 
 			var cssText = document.createElement('style'); 

@@ -18,7 +18,7 @@ You need [VivaldiHooks](https://github.com/justdanpo/VivaldiHooks) to use them a
 
  - Allows adding css to https://chrome.google.com/webstore. However you can only add css as a variable in the hook itself.
  
-**theme-color-variables**: 
- - [theme-color-variables.js](https://github.com/Sporif/CustomHooks/blob/master/hooks/theme-color-variables.js)
+**theme-css-variables**: 
+ - [theme-css-variables.js](https://github.com/Sporif/CustomHooks/blob/master/hooks/theme-css-variables.js)
 
  - Sends the current theme's css variables to chrome:// and vivaldi:// urls. With an extension like [chromedotfiles](https://github.com/hbt/chromedotfiles), this allows styling those pages based on the currently applied theme.

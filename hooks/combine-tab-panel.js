@@ -1,9 +1,7 @@
 // Places the tabs container on top of the panels container when they're on the same side
 // Script sets height/widths, and adds resizer splitters
 
-startCombineTabPanel();
-
-function startCombineTabPanel() {
+(function() {
 	
 	// Style elements
 	var tabspanels_flexBasis = document.createElement('style');
@@ -147,4 +145,5 @@ function startCombineTabPanel() {
 			}, time);
 		}
 	}
-}
+	
+})();

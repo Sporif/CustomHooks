@@ -1,7 +1,17 @@
 # CustomHooks
-Just some of my hooks for Vivaldi
+Just some css/js modifcations for Vivaldi.
 
-You need [VivaldiHooks](https://github.com/justdanpo/VivaldiHooks) to use them as hooks. Alternatively add them to browser.html, as they don't actually need VivaldiHooks to work (it's just way more convenient).
+Either use [VivaldiHooks](https://github.com/justdanpo/VivaldiHooks) (which only works on 1.12 and below) or add them to browser.html, located at
+
+`YOURVIVALDIDIRECTORY\Application\VERSION\resources\vivaldi`
+
+Open browser.html and inside the body element add the following line:
+
+`<script src="custom.js"></script>`
+
+(obviously replacing `custom.js` with the appropriate file name)
+
+Now add the actual corresponding script to the Vivaldi folder (alongside browser.html)
 
 **combine-header-toolbar**: 
  - [combine-header-toolbar.css](https://github.com/Sporif/CustomHooks/blob/master/hooks/combine-header-toolbar.css) 
@@ -16,9 +26,14 @@ You need [VivaldiHooks](https://github.com/justdanpo/VivaldiHooks) to use them a
 **chrome-webstore-css**: 
  - [chrome-webstore-css.js](https://github.com/Sporif/CustomHooks/blob/master/hooks/chrome-webstore-css.js)
 
- - Allows adding css to https://chrome.google.com/webstore. However you can only add css as a variable in the hook itself.
+ - Allows adding css to https://chrome.google.com/webstore. However you can only add css as a variable in the script itself.
  
 **theme-css-variables**: 
  - [theme-css-variables.js](https://github.com/Sporif/CustomHooks/blob/master/hooks/theme-css-variables.js)
 
  - Sends the current theme's css variables to chrome:// and vivaldi:// urls. With an extension like [chromedotfiles](https://github.com/hbt/chromedotfiles), this allows styling those pages based on the currently applied theme.
+ 
+**white-flash-fix**: 
+ - [white-flash-fix.js](https://github.com/Sporif/CustomHooks/blob/master/hooks/white-flash-fix.js)
+
+ - Fixes the white flash that occurs when navigating away from the start page or blank page. It sets the color to the current theme's background color.

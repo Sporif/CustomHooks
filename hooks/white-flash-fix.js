@@ -1,3 +1,4 @@
+// Fix the white flash when navigating away from the start page or blank page. Sets its color to the current theme's background.
 (function() {
 	var bodyStyles, colorBg;
 	var observer = new MutationObserver(getBgColor);

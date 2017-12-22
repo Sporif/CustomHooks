@@ -32,6 +32,16 @@ Now add the corresponding file to the Vivaldi folder (alongside browser.html)
 
  - Allows adding css to https://chrome.google.com/webstore. However you can only add css as a variable in the script itself.
  
+**middle-click-undo-close**; 
+ - [middle-click-undo-close.js](https://github.com/Sporif/CustomHooks/blob/master/hooks/middle-click-undo-close.js)
+
+ - Middle click on the tab bar to re-open the last closed tab (instead of creating a new one). Within the file you can set `restoreWindows` to true to re-open windows as well.
+ 
+**smooth-tab-switch-scroll**; 
+ - [smooth-tab-switch-scroll.js](https://github.com/Sporif/CustomHooks/blob/master/hooks/smooth-tab-switch-scroll.js)
+
+ - Smooth tab switching when scrolling the tab bar. Also adds Shift+Scroll to scroll the tab bar. Within the file you can set `wrap` to false to disable switching to the first tab from the bottom and vice versa.
+ 
 **theme-css-variables**: 
  - [theme-css-variables.js](https://github.com/Sporif/CustomHooks/blob/master/hooks/theme-css-variables.js)
 

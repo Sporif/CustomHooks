@@ -5,13 +5,17 @@ Either use [VivaldiHooks](https://github.com/justdanpo/VivaldiHooks) (which only
 
 `YOURVIVALDIDIRECTORY\Application\VERSION\resources\vivaldi`
 
-Open browser.html and inside the body element add the following line:
+For .css files add this line to the head element:
+
+`<link rel="stylesheet" href="custom.css" />`
+
+For .js files add the this line to the body element:
 
 `<script src="custom.js"></script>`
 
-(obviously replacing `custom.js` with the appropriate file name)
+(obviously replacing `custom.js` or `custom.css` with the appropriate file name)
 
-Now add the actual corresponding script to the Vivaldi folder (alongside browser.html)
+Now add the corresponding file to the Vivaldi folder (alongside browser.html)
 
 **combine-header-toolbar**: 
  - [combine-header-toolbar.css](https://github.com/Sporif/CustomHooks/blob/master/hooks/combine-header-toolbar.css) 

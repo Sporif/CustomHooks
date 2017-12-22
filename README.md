@@ -1,6 +1,7 @@
 # CustomHooks
-Just some css/js modifcations for Vivaldi.
+Just some css/js modifications for Vivaldi.
 
+## Instructions: 
 Either use [VivaldiHooks](https://github.com/justdanpo/VivaldiHooks) (which only works on 1.12 and below) or add them to browser.html, located at
 
 `YOURVIVALDIDIRECTORY\Application\VERSION\resources\vivaldi`
@@ -17,6 +18,7 @@ For .js files add the this line to the body element:
 
 Now add the corresponding file to the Vivaldi folder (alongside browser.html)
 
+## Hooks:
 **combine-header-toolbar**: 
  - [combine-header-toolbar.css](https://github.com/Sporif/CustomHooks/blob/master/hooks/combine-header-toolbar.css) 
 
@@ -35,12 +37,12 @@ Now add the corresponding file to the Vivaldi folder (alongside browser.html)
 **middle-click-undo-close**; 
  - [middle-click-undo-close.js](https://github.com/Sporif/CustomHooks/blob/master/hooks/middle-click-undo-close.js)
 
- - Middle click on the tab bar to re-open the last closed tab (instead of creating a new one). Within the file you can set `restoreWindows` to true to re-open windows as well.
+ - Middle click on the tab bar to re-open the last closed tab (instead of creating a new one). Within the script you can set `restoreWindows` to true to re-open windows as well.
  
 **smooth-tab-switch-scroll**; 
  - [smooth-tab-switch-scroll.js](https://github.com/Sporif/CustomHooks/blob/master/hooks/smooth-tab-switch-scroll.js)
 
- - Smooth tab switching when scrolling the tab bar. Also adds Shift+Scroll to scroll the tab bar. Within the file you can set `wrap` to false to disable switching to the first tab from the bottom and vice versa.
+ - Smooth tab switching when scrolling the tab bar. Also adds Shift+Scroll to scroll the tab bar. Within the script you can set `wrap` to false to disable switching to the first tab from the bottom and vice versa.
  
 **theme-css-variables**: 
  - [theme-css-variables.js](https://github.com/Sporif/CustomHooks/blob/master/hooks/theme-css-variables.js)
